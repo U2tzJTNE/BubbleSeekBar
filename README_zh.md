@@ -14,11 +14,24 @@
 
 ## Download
 [![](https://jitpack.io/v/U2tzJTNE/BubbleSeekBar.svg)](https://jitpack.io/#U2tzJTNE/BubbleSeekBar)
+
+
+```groovy
+allprojects {
+	repositories {
+		...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+
 ```groovy
   dependencies {
     implementation 'com.github.U2tzJTNE:BubbleSeekBar:${LATEST_VERSION}'
   }
 ```
+
 ## Usage  
 ### Init in xml
 ```xml

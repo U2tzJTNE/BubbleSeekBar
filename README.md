@@ -15,16 +15,22 @@
 ![demo4](https://github.com/woxingxiao/BubbleSeekBar/blob/master/screenshot/demo4.gif)
 
 ## Download
-The **LATEST_VERSION**: [![Download](https://api.bintray.com/packages/woxingxiao/maven/bubbleseekbar/images/download.svg)](https://bintray.com/woxingxiao/maven/bubbleseekbar/_latestVersion)
+[![](https://jitpack.io/v/U2tzJTNE/BubbleSeekBar.svg)](https://jitpack.io/#U2tzJTNE/BubbleSeekBar)
+
+
+```groovy
+allprojects {
+	repositories {
+		...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+
 ```groovy
   dependencies {
-     // lite version (recommended)
-     // e.g. implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
-        implementation 'com.xw.repo:bubbleseekbar:${LATEST_VERSION}-lite'
-
-     // enhanced version
-     // e.g. implementation 'com.xw.repo:bubbleseekbar:3.20'
-     // implementation 'com.xw.repo:bubbleseekbar:${LATEST_VERSION}'
+    implementation 'com.github.U2tzJTNE:BubbleSeekBar:${LATEST_VERSION}'
   }
 ```
 
