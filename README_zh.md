@@ -11,17 +11,12 @@
 *******
 ![demo3](https://github.com/woxingxiao/BubbleSeekBar/blob/master/screenshot/demo3.gif)
 ![demo4](https://github.com/woxingxiao/BubbleSeekBar/blob/master/screenshot/demo4.gif)
+
 ## Download
-The **LATEST_VERSION**：[![Download](https://api.bintray.com/packages/woxingxiao/maven/bubbleseekbar/images/download.svg)](https://bintray.com/woxingxiao/maven/bubbleseekbar/_latestVersion)
+[![](https://jitpack.io/v/U2tzJTNE/BubbleSeekBar.svg)](https://jitpack.io/#U2tzJTNE/BubbleSeekBar)
 ```groovy
   dependencies {
-     // lite version 轻量版（推荐）
-     // 例如：implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
-        implementation 'com.xw.repo:bubbleseekbar:${LATEST_VERSION}-lite'
-     
-     // enhanced version 增强版
-     // 例如：implementation 'com.xw.repo:bubbleseekbar:3.20'
-     // implementation 'com.xw.repo:bubbleseekbar:${LATEST_VERSION}'
+    implementation 'com.github.U2tzJTNE:BubbleSeekBar:${LATEST_VERSION}'
   }
 ```
 ## Usage  

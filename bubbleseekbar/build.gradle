@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 def VERSION_NAME = "3.20"
 
@@ -16,8 +17,12 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -26,12 +31,15 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
 }
 
-apply plugin: 'com.novoda.bintray-release'
-publish {
-    userOrg = 'woxingxiao'
-    groupId = 'com.xw.repo'
-    artifactId = 'bubbleseekbar'
-    publishVersion = VERSION_NAME
-    desc = 'A beautiful Android custom seekbar, which has a bubble view with progress appearing upon when seeking.'
-    website = 'https://github.com/woxingxiao/BubbleSeekBar'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.u2tzjtne'
+                artifactId = 'BubbleSeekbar'
+                version = VERSION_NAME
+            }
+        }
+    }
 }
